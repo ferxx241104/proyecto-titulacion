@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Esto ayuda a que el tamaño de las cajas sea exacto */
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita que aparezcan barras de scroll innecesarias */
+}
+
+
+/* 1. Reset y Contenedor Principal */
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Fondo dinámico con gradiente */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. La Tarjeta (Card) */
+.card {
+    display: flex; /* Flexbox para dividir en dos paneles */
+    width: 1000px;/* Ancho fijo para la tarjeta */
+    height: 650px;/* Alto fijo para la tarjeta */
+    border-radius: 50px; /* Bordes redondeados modernos */
+    overflow: hidden; /* Corta lo que se salga de los bordes redondeados */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+/* Panel Izquierdo (Imagen/Bienvenida) */
+.left-panel {
+    flex: 1; /* Toma el 50% del ancho */
+    background: url('https://tesjo.edomex.gob.mx/sites/tesjo.edomex.gob.mx/files/images/Acerca%20del%20TESJo/Entrada%20TESJo_2.jpg');
+    background-size: cover; /* Hace que la imagen cubra todo el panel */
+    background-position: center; /* Centra la imagen */
+    position: relative; /* Para posicionar la capa de color encima */
+}
+
+.overlay {
+    position: absolute; /* Posiciona la capa de color encima de la imagen */
+    width: 100%; height: 100%;
+    background: rgba(118, 75, 162, 0.8); /* Capa de color semi-transparente sobre la imagen */
+    display: flex; /* Flexbox para centrar el contenido */
+    flex-direction: column;/* Para apilar el texto verticalmente */
+    justify-content: center;/* Centra verticalmente */
+    align-items: center;/* Centra horizontalmente */
+    color: white;/* Color del texto */
+    padding: 10px;/* Espaciado interno */
+    text-align: center;/* Centra el texto */
+}
+
+/* 4. Panel Derecho (Formulario) */
+.right-panel {
+    flex: 1; /* Toma el otro 50% */
+    display: flex;/* Flexbox para centrar el formulario */
+    justify-content: center; /* Centra horizontalmente el formulario */
+    align-items: center; /* Centra verticalmente el formulario */
+    background-color: #f9f9f9; /* Fondo claro para el formulario */
+}
+
+.login-form { /* Estilos para el formulario de inicio de sesión */
+    width: 80%;/* Ancho del formulario dentro del panel derecho */
+    display: flex;/* Flexbox para organizar los elementos del formulario */
+    flex-direction: column;/* Para apilar los elementos del formulario verticalmente */
+}
+
+.login-form h2 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #333; /* Color del título */
+    font-size: 2rem; /* Tamaño del título */
+}
+
+/* 5. Inputs Estilizados */ 
+.login-form input {/* Estilos para los campos de texto del formulario */
+    padding: 15px; /* Espaciado interno para hacer los campos más grandes */
+    margin-bottom: 20px; /* Espacio entre los campos */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 8px; /* Bordes redondeados */
+    outline: none; /* Elimina el borde azul predeterminado al hacer clic */
+    transition: all 0.3s ease; /* Hace que el cambio de color sea suave */
+}
+
+.login-form input:focus {
+    border-color: #764ba2; /* Cambia el borde al hacer clic */
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.2); /* Brillo sutil */
+}
+
+/* 6. Botón Dinámico */
+.login-form button {
+    padding: 15px; /* Espaciado interno para hacer el botón más grande */
+    background: #764ba2; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde predeterminado del botón */
+    border-radius: 8px; /* Bordes redondeados para el botón */
+    font-size: 1rem;/* Tamaño del texto del botón */
+    font-weight: bold;/* Hace que el texto del botón sea más grueso */
+    cursor: pointer;/* Cambia el cursor al pasar sobre el botón */
+    transition: transform 0.2s, background 0.3s; /* Efecto de rebote y color */
+}
+
+.login-form button:hover {
+    background: #5a3a7a; /* Color más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* El botón sube ligeramente */
+}
+
+.login-form button:active {
+    transform: translateY(0); /* Vuelve a su lugar al hacer clic */
+}
+
+/* 7. Texto de ayuda */
+.login-form p {
+    margin-top: 20px;/* Espacio encima del texto de ayuda */
+    font-size: 0.85rem; /* Tamaño del texto de ayuda */
+    color: #666;/* Color del texto de ayuda */
+    line-height: 1.5;/*Espaciado entre líneas para mejorar la legibilidad */
+}
