@@ -12,7 +12,7 @@ function App() { // Componente principal de la aplicación
 }
 
 
-
+  
 
 
 export default App;
