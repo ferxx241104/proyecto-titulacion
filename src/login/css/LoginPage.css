@@ -17,8 +17,9 @@ body, html {
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Ocupa toda la altura de la pantalla */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Fondo dinámico con gradiente */
+    background: url('https://tesjo.edomex.gob.mx/sites/tesjo.edomex.gob.mx/files/images/Acerca%20del%20TESJo/Entrada%20TESJo_2.jpg');
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 /* 2. La Tarjeta (Card) */
@@ -39,6 +40,7 @@ body, html {
     background-position: center; /* Centra la imagen */
     position: relative; /* Para posicionar la capa de color encima */
 }
+
 
 .overlay {
     position: absolute; /* Posiciona la capa de color encima de la imagen */
@@ -117,4 +119,18 @@ body, html {
     font-size: 0.85rem; /* Tamaño del texto de ayuda */
     color: #666;/* Color del texto de ayuda */
     line-height: 1.5;/*Espaciado entre líneas para mejorar la legibilidad */
+}
+
+.mensaje-login {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #8b0f3d;
+}
+
+.texto-ayuda {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #555;
 }
