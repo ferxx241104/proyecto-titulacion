@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./css/LoginPage.css";
+import "../css/LoginPage.css";
 
 function LoginPage() {
   const [nombre, setNombre] = useState("");
